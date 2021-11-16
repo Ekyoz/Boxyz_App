@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_heat">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.boxyz.fragment.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_light"
+        android:name="com.example.boxyz.fragment.LightFragment"
+        android:label="light"
+        tools:layout="@layout/fragment_light" />
+    <fragment
+        android:id="@+id/navigation_heat"
+        android:name="com.example.boxyz.fragment.heat.HeatFragment"
+        android:label="heat"
+        tools:layout="@layout/fragment_heat" />
+    <fragment
+        android:id="@+id/navigation_remote"
+        android:name="com.example.boxyz.fragment.remoteFragment"
+        android:label="remote"
+        tools:layout="@layout/fragment_remote" />
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.boxyz.fragment.SettingsFragment"
+        android:label="settigns"
+        tools:layout="@layout/fragment_settings" />
+
+
+</navigation>

@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Boxyz" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/day_primaire</item> <!-- premiere couleur -->
+        <item name="colorPrimaryVariant">@color/day_primaire_varient</item>
+        <item name="colorSecondary">@color/day_secondaire</item>
+        <item name="colorSecondaryVariant">@color/day_secondaire_varient</item>
+        <item name="colorAccent">@color/day_accent</item>
+        <item name="colorOnBackground">@color/day_background</item> <!-- background -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="android:fontFamily">@font/coves</item>
+    </style>
+
+    <style name="Theme.Boxyz.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Boxyz.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Boxyz.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
