@@ -25,8 +25,6 @@ public class SocketClient extends AsyncTask<String, Void, String> {
 
             PrintWriter pw = new PrintWriter(s.getOutputStream(), true);
 
-            //postToastMessage("Message: " + message, Toast.LENGTH_SHORT);
-
             pw.write(message[0]);
             Log.d("SOCKET_CLIENT", "Message: " + message[0]);
             pw.flush();

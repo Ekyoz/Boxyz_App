@@ -3,16 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/activity_heat_time.xml" value="0.30641025641025643" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/content_heat_time.xml" value="0.30641025641025643" />
+        <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_first.xml" value="0.30641025641025643" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_heat.xml" value="0.33" />
+        <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_heat_list.xml" value="0.30641025641025643" />
+        <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_heat_set.xml" value="0.30641025641025643" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_heat_time.xml" value="0.30641025641025643" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_light.xml" value="0.3734375" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_remote.xml" value="0.3734375" />
+        <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_second.xml" value="0.30641025641025643" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_settings.xml" value="0.3734375" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/fragment_test.xml" value="0.3734375" />
+        <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/heat_time_slot_adapteur.xml" value="0.21965811965811965" />
+        <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/heat_time_slot_list_adapteur.xml" value="0.21965811965811965" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/time_slot.xml" value="0.67" />
+        <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/layout/time_slot_set.xml" value="0.33" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/menu/bottom_nav_menu.xml" value="0.33" />
+        <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/menu/menu_time_set.xml" value="0.30641025641025643" />
         <entry key="..\:/Projets/Boxyz/Boxyz/app/src/main/res/menu/time_slot.xml" value="0.30641025641025643" />
       </map>
     </option>

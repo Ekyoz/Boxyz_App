@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentheat"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
+    android:name="androidx.navigation.fragment.NavHostFragment"
     tools:context=".fragment.heat.HeatFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -68,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_status"
+        android:id="@+id/btn_state"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
@@ -83,7 +85,7 @@
         app:tint="?attr/colorAccent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_clock"
+        android:id="@+id/btn_heat_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
@@ -109,7 +111,7 @@
         android:dividerHeight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:layout_constraintVertical_bias="0.0" />
@@ -124,7 +126,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/croller"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_status"
+        app:layout_constraintTop_toBottomOf="@+id/btn_state"
         app:layout_constraintVertical_bias="0.18" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

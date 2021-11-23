@@ -1,19 +1,22 @@
 package com.example.boxyz.fragment.heat;
 
+import android.content.Context;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.boxyz.R;
-import com.example.boxyz.SocketClient;
 import com.example.boxyz.adapters.TimeSlotItemAdapteur;
 import com.example.boxyz.models.TimeSlotItem;
 import com.sdsmdg.harjot.crollerTest.Croller;
@@ -21,15 +24,15 @@ import com.sdsmdg.harjot.crollerTest.OnCrollerChangeListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 public class HeatFragment extends Fragment {
 
-    public String reponse;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private String mParam1;
     private String mParam2;
+
+
     public HeatFragment() {
     }
 
@@ -54,12 +57,24 @@ public class HeatFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        //View
         View view = inflater.inflate(R.layout.fragment_heat, container, false);
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
+        //Variables
+        ListView timeSlotListView = view.findViewById(R.id.TimeSlotList);
+        //Heat heat = new Heat();
         Croller croller = view.findViewById(R.id.croller);
-        Toast.makeText(getContext(), "test", Toast.LENGTH_SHORT);
+        ImageButton btn_state = view.findViewById(R.id.btn_state);
+        List<TimeSlotItem> timeSlotList = new ArrayList<>();
+
+        //set adapteur list view
+        //heat.getList();
+        timeSlotList.add(new TimeSlotItem("Lundi", "18:00 - 19:00","21,5°C", true));
+        timeSlotList.add(new TimeSlotItem("Mardi", "15:00 - 16:00","19°C", true));
+        timeSlotList.add(new TimeSlotItem("Mercredi", "12:00 - 15:00", "19°C", false));
+
+        timeSlotListView.setAdapter(new TimeSlotItemAdapteur(getContext(), timeSlotList));
+
+        //Croller
         croller.setProgress(5);
         croller.setOnCrollerChangeListener(new OnCrollerChangeListener() {
             @Override
@@ -78,29 +93,38 @@ public class HeatFragment extends Fragment {
             }
         });
 
-        ImageButton button = view.findViewById(R.id.btn_status);
-        button.setOnClickListener(new View.OnClickListener() {
+        //Button On/Off
+        btn_state.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SocketClient send = new SocketClient();
-                send.execute("heatStatus");
-                try {
-                    reponse = send.get();
-                } catch (ExecutionException | InterruptedException e) {
-                    Toast.makeText(getContext(),"Le serveur ne repond pas !", Toast.LENGTH_LONG).show();
-                    e.printStackTrace();
-                }
+            }
+        });
+        //click listener for change fragmant to heat set
+        timeSlotListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
+                Bundle bundle = new Bundle();
+                bundle.putInt("position", position);
+                NavHostFragment.findNavController(HeatFragment.this).navigate(R.id.action_navigation_heat_to_navigation_heat_set, bundle);
             }
         });
 
-        List<TimeSlotItem> timeSlotListList = new ArrayList<>();
-        timeSlotListList.add(new TimeSlotItem("Samedi", "19:30 - 21:30", "21°C"));
-        timeSlotListList.add(new TimeSlotItem("Dimanche", "19:30 - 21:30", "21°C"));
-        timeSlotListList.add(new TimeSlotItem("Lundi", "19:30 - 21:30", "21°C"));
-
-        ListView timeSlotView = view.findViewById(R.id.TimeSlotList);
-        timeSlotView.setAdapter(new TimeSlotItemAdapteur(getContext(), timeSlotListList));
-
         return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        view.findViewById(R.id.btn_heat_list).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(HeatFragment.this).navigate(R.id.action_navigation_heat_to_navigation_heat_time);
+            }
+        });
+    }
+
+    private void makeToast(Context context, String message){
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 }

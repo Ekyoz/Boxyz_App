@@ -12,13 +12,13 @@ import com.example.boxyz.models.TimeSlotItem;
 
 import java.util.List;
 
-public class TimeSlotItemAdapteur extends BaseAdapter {
+public class TimeSlotItemListAdapteur extends BaseAdapter {
 
     private Context context;
     private List<TimeSlotItem> timeSlotItemList;
     private LayoutInflater inflater;
 
-    public TimeSlotItemAdapteur(Context context, List<TimeSlotItem> timeSlotItemList){
+    public TimeSlotItemListAdapteur(Context context, List<TimeSlotItem> timeSlotItemList){
         this.context = context;
         this.timeSlotItemList = timeSlotItemList;
         this.inflater = LayoutInflater.from(context);
@@ -42,18 +42,18 @@ public class TimeSlotItemAdapteur extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup parent) {
 
-        view = inflater.inflate(R.layout.heat_time_slot_adapteur, null);
+        view = inflater.inflate(R.layout.heat_time_slot_list_adapteur, null);
 
         TimeSlotItem currentItem  = getItem(i);
         String itemDay = currentItem.getDay();
         String itemHour = currentItem.getHour();
         String itemTemp = currentItem.getTemp();
 
-        TextView itemDayView = view.findViewById(R.id.heat_time_day);
+        TextView itemDayView = view.findViewById(R.id.heat_time_list_days);
         itemDayView.setText(itemDay);
-        TextView itemHourView = view.findViewById(R.id.heat_time_hours);
+        TextView itemHourView = view.findViewById(R.id.heat_time_list_hours);
         itemHourView.setText(itemHour);
-        TextView itemTempView = view.findViewById(R.id.heat_time_temp);
+        TextView itemTempView = view.findViewById(R.id.heat_time_list_temp);
         itemTempView.setText(itemTemp);
 
         return view;
