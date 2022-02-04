@@ -1,0 +1,10 @@
+{
+  "serveur": {
+    "ip": {
+      "local": "192.168.1.45",
+      "externe": "86.207.168.206"
+    },
+    "port":3131,
+    "wifi_name": ["Mon WiFi", "Mon WiFi 5GHz"]
+  }
+}

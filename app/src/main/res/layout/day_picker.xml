@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/roundcorner2">
+
+    <CheckBox
+        android:id="@+id/checkBox_Lundi"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
+        android:buttonTint="?attr/colorPrimary"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Mercredi"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        android:buttonTint="?attr/colorPrimary"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_Mardi"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Mardi"
+        android:layout_width="wrap_content"
+        android:buttonTint="?attr/colorPrimary"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_Lundi"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Vendredi"
+        android:layout_width="wrap_content"
+        android:buttonTint="?attr/colorPrimary"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_Jeudi"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Samedi"
+        android:layout_width="wrap_content"
+        android:buttonTint="?attr/colorPrimary"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_Vendredi"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Jeudi"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:buttonTint="?attr/colorPrimary"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_Mercredi"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <CheckBox
+        android:id="@+id/checkBox_Dimanche"
+        android:layout_width="wrap_content"
+        android:buttonTint="?attr/colorPrimary"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_Samedi"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="L"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_Lundi"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Lundi" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="M"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_Lundi"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Mardi" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="M"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_Mercredi"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Mercredi" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="J"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_Mercredi"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Jeudi" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="V"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_Vendredi"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Vendredi" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="S"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_Vendredi"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Samedi" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="D"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_Samedi"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Dimanche" />
+</androidx.constraintlayout.widget.ConstraintLayout>
