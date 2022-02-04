@@ -44,7 +44,7 @@ public class SocketClient extends AsyncTask<String, Void, String> {
             System.out.println("Fail");
             e.printStackTrace();
             Log.e("SOCKET_CLIENT", "Exception: " + e.getMessage());
-            return e.getMessage();
+            return null;
         }
     }
 }

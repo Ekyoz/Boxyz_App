@@ -8,7 +8,7 @@
         <item name="colorSecondaryVariant">@color/day_secondaire_varient</item>
         <item name="colorAccent">@color/day_accent</item>
         <item name="colorOnBackground">@color/day_background</item> <!-- background -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorOnBackground</item>
         <item name="android:fontFamily">@font/coves</item>
     </style>
 

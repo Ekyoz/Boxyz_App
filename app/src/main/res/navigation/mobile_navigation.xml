@@ -23,23 +23,7 @@
         android:label="heat"
         tools:layout="@layout/fragment_heat">
         <action
-            android:id="@+id/action_navigation_heat_to_navigation_heat_time"
-            app:destination="@id/navigation_heat_time" />
-        <action
             android:id="@+id/action_navigation_heat_to_navigation_heat_set"
-            app:destination="@id/navigation_heat_set" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_heat_time"
-        android:name="com.example.boxyz.fragment.heat.HeatListFragment"
-        android:label="heatTime"
-        tools:layout="@layout/fragment_heat_list">
-        <action
-            android:id="@+id/action_navigation_heat_time_to_navigation_heat"
-            app:destination="@id/navigation_heat" />
-        <action
-            android:id="@+id/action_navigation_heat_time_to_navigation_heat_set"
             app:destination="@id/navigation_heat_set" />
     </fragment>
 
@@ -47,11 +31,7 @@
         android:id="@+id/navigation_heat_set"
         android:name="com.example.boxyz.fragment.heat.HeatSetFragment"
         android:label="heat_time"
-        tools:layout="@layout/fragment_heat_set" >
-        <action
-            android:id="@+id/action_navigation_heat_set_to_navigation_heat_time"
-            app:destination="@id/navigation_heat_time" />
-    </fragment>
+        tools:layout="@layout/fragment_heat_set" />
 
 
     <fragment

@@ -12,6 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.boxyz.R;
+import com.example.boxyz.adapters.DayPicker;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class HeatSetFragment extends Fragment {
 
@@ -47,24 +49,41 @@ public class HeatSetFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_heat_set, container, false);
         int position = getArguments().getInt("position");
-        TextView textView = view.findViewById(R.id.heat_time_temp);
-        final int[] temp = {21};
+        Heat heat = new Heat();
+        //View
+        Button btn_add = view.findViewById(R.id.btnAdd);
+        Button btn_del = view.findViewById(R.id.btnDel);
+        TextView timeTemp = view.findViewById(R.id.heat_time_temp_set);
+        TextView timeStart = view.findViewById(R.id.tempStart);
+        TextView timeEnd = view.findViewById(R.id.tempEnd);
+        TextInputEditText inputName = view.findViewById(R.id.NameInput);
+        DayPicker dayPicker = new DayPicker();
+        //Varialbe
+        int[] temp = {heat.getTemp(position)};
 
+        //init view
+        timeTemp.setText(temp[0] + "°C");
+        inputName.setText(heat.getName(position));
+        timeStart.setText(heat.getHourStart(position));
+        timeEnd.setText(heat.getHourEnd(position));
+        dayPicker.setCheck(view, position);
 
-        Button btn_add = view.findViewById(R.id.add);
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                temp[0]++;
-                textView.setText(temp[0] + "°C");
+                if(temp[0] <= 24){
+                    temp[0]++;
+                    timeTemp.setText(temp[0] + "°C");
+                }
             }
         });
-        Button btn_del = view.findViewById(R.id.del);
         btn_del.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                temp[0]--;
-                textView.setText(temp[0] + "°C");
+                if(temp[0] >= 16){
+                    temp[0]--;
+                    timeTemp.setText(temp[0] + "°C");
+                }
             }
         });
 

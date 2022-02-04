@@ -54,7 +54,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/btnAdd"
         style="?borderlessButtonStyle"
         android:layout_width="85dp"
         android:layout_height="87dp"

@@ -9,7 +9,7 @@
     <color name="danger">#F93154</color>
     <color name="transparent">#00FFFFFF</color>
     <!-- color of day theme -->
-    <color name="day_primaire">#1A237E</color>
+    <color name="day_primaire">#16237f</color>
     <color name="day_primaire_varient">#303F9F</color>
     <color name="day_secondaire">#262626</color>
     <color name="day_secondaire_varient">#616161</color>
@@ -23,4 +23,9 @@
     <color name="night_accent">#424242</color>
     <color name="night_background">#262626</color>
 
+    <color name="dayPressed">?attr/colorPrimaryVariant</color>
+    <color name="daySelected">?attr/colorPrimary</color>
+    <color name="daySelectedTextColor">?attr/colorAccent</color>
+    <color name="dayDeselected">?attr/colorAccent</color>
+    <color name="dayDeselectedTextColor">?attr/colorPrimary</color>
 </resources>
