@@ -1,30 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_boiler"
+        android:enabled="true"
+        android:icon="@drawable/thermometer"
+        tools:ignore="MenuTitle" />
 
     <item
-        android:id="@+id/navigation_light"
-        android:icon="@drawable/lightbulb"
-        android:title="Lumières" />
-
-    <item
-        android:id="@+id/navigation_heat"
-        android:icon="@drawable/heat"
-        android:title="Chauffage" />
-
-    <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/accueil"
-        android:title="Accueil" />
-
-    <item
-        android:id="@+id/navigation_remote"
-        android:icon="@drawable/remote"
-        android:title="Télécommande" />
-
-    <item
-        android:id="@+id/navigation_settings"
-        android:icon="@drawable/settings"
-        android:title="Parametres" />
-
+        android:id="@+id/navigation_time_slot"
+        android:enabled="true"
+        android:icon="@drawable/hour"
+        tools:ignore="MenuTitle" />
 
 </menu>

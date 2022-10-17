@@ -3,47 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_heat">
+    app:startDestination="@+id/navigation_boiler">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.boxyz.fragment.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/navigation_light"
-        android:name="com.example.boxyz.fragment.LightFragment"
-        android:label="light"
-        tools:layout="@layout/fragment_light" />
-
+        android:id="@+id/navigation_boiler"
+        android:name="com.ekyoz.boxyz.fragments.BoilerFragment"
+        android:label="@string/title_heater"
+        tools:layout="@layout/fragment_boiler" />
 
     <fragment
-        android:id="@+id/navigation_heat"
-        android:name="com.example.boxyz.fragment.heat.HeatFragment"
-        android:label="heat"
-        tools:layout="@layout/fragment_heat">
-        <action
-            android:id="@+id/action_navigation_heat_to_navigation_heat_set"
-            app:destination="@id/navigation_heat_set" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_heat_set"
-        android:name="com.example.boxyz.fragment.heat.HeatSetFragment"
-        android:label="heat_time"
-        tools:layout="@layout/fragment_heat_set" />
-
-
-    <fragment
-        android:id="@+id/navigation_remote"
-        android:name="com.example.boxyz.fragment.remoteFragment"
-        android:label="remote"
-        tools:layout="@layout/fragment_remote" />
-    <fragment
-        android:id="@+id/navigation_settings"
-        android:name="com.example.boxyz.fragment.SettingsFragment"
-        android:label="settigns"
-        tools:layout="@layout/fragment_settings" />
-
+        android:id="@+id/navigation_time_slot"
+        android:name="com.ekyoz.boxyz.fragments.TimeSlotFragment"
+        android:label="@string/title_clock"
+        tools:layout="@layout/fragment_time_slot" />
 
 </navigation>
